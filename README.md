@@ -1,5 +1,30 @@
 #### pklinuxutcok
-
+- cp4
+```
+ifconfig
+```
+get ipv6 updereth0/wlan0, like 1111:1111:1111:1111:1111:1111:1111:1111
+```
+ping6 <idv6addr>
+```
+- cp5
+delete all rules:
+```
+iptables -F
+```
+block specific ip:
+```
+iptables -A INPUT -s 1.1.1.1 -j DROP
+```
+allow loopback:
+```
+iptables -A INPUT -i lo -j ACCEPT
+```
+allow loopback:
+```
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
+```
 - cp6
 to see process currently running on the system
 ```
